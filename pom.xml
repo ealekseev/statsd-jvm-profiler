@@ -209,6 +209,44 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>rpm-maven-plugin</artifactId>
+                <version>2.1.5</version>
+                <executions>
+                    <execution>
+                        <id>generate-rpm</id>
+                        <goals>
+                            <goal>rpm</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <license>GPL (c) 2005, SWWDC</license>
+                    <distribution>Trash 2005</distribution>
+                    <group>Application/Collectors</group>
+                    <packager>SWWDC</packager>
+                    <prefix>/usr/local</prefix>
+                    <changelogFile>src/changelog</changelogFile>
+                    <defineStatements>
+                        <defineStatement>_unpackaged_files_terminate_build 0</defineStatement>
+                    </defineStatements>
+                    <copyright>2010, NoBody</copyright>
+                    <group>Development</group>
+                    <description>Maven Recipe: RPM Package.</description>
+                    <mappings>
+                        <mapping>
+                            <directory>/usr/lib/java</directory>
+                            <sources>
+                                <source>
+                                    <location>target/statsd-jvm-profiler-2.1.1-SNAPSHOT-jar-with-dependencies.jar</location>
+                                    <destination>/usr/lib/java/statsd-jvm-profiler.jar</destination>
+                                </source>
+                            </sources>
+                        </mapping>
+                    </mappings>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
