@@ -223,6 +223,7 @@
                 </executions>
                 <configuration>
                     <license>MIT</license>
+                    <group>Development/Tools</group>
                     <distribution>centos</distribution>
                     <defineStatements>
                         <defineStatement>_unpackaged_files_terminate_build 0</defineStatement>
@@ -233,7 +234,7 @@
                             <directoryIncluded>false</directoryIncluded>
                             <sources>
                                 <source>
-                                    <location>target/statsd-jvm-profiler-${version}-jar-with-dependencies.jar</location>
+                                    <location>target/statsd-jvm-profiler-${project.version}-jar-with-dependencies.jar</location>
                                     <destination>statsd-jvm-profiler.jar</destination>
                                 </source>
                             </sources>
