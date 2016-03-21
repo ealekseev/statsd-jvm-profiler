@@ -226,7 +226,7 @@
                     <distribution>Trash 2005</distribution>
                     <group>Application/Collectors</group>
                     <packager>SWWDC</packager>
-                    <prefix>/usr/local</prefix>
+                    <prefix>/usr/lib/java</prefix>
                     <changelogFile>src/changelog</changelogFile>
                     <defineStatements>
                         <defineStatement>_unpackaged_files_terminate_build 0</defineStatement>
@@ -237,6 +237,7 @@
                     <mappings>
                         <mapping>
                             <directory>/usr/lib/java</directory>
+			    <directoryIncluded>false</directoryIncluded>
                             <sources>
                                 <source>
                                     <location>target/statsd-jvm-profiler-2.1.1-SNAPSHOT-jar-with-dependencies.jar</location>
